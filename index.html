@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Patient Profile Dashboard</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+  <header>
+    <center>
+      <div id="logo">
+        <img src="logoImg.png" alt="Logo">
+      </div>
+      <h1>Patient Profile Dashboard</h1>
+    </center>
+  </header>
+
+  <div id="patient-info">
+    <form>
+      <label for="file-upload">Upload Patient CSV:</label>
+      <input type="file" id="file-upload" accept=".csv">
+      <button type="submit">Submit</button>
+      <!-- Add a button to trigger the PDF export -->
+      <button id="export-pdf">Export to PDF</button>
+
+    </form>
+  </div>
+
+  <table id="patient-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Gender</th>
+        <th>Medical Conditions</th>
+      </tr>
+    </thead>
+    <tbody id="patient-data">
+      <!-- Patient data will be dynamically inserted here -->
+    </tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
