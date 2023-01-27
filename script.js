@@ -16,7 +16,7 @@ fileUpload.addEventListener("change", event => {
     reader.onload = event => {
       // Get the contents of the file as a string
       const csv = event.target.result;
-      
+
       // Use PapaParse library to parse the CSV string
       const data = Papa.parse(csv, {
         header: true,
@@ -64,43 +64,42 @@ exportButton.addEventListener("click", () => {
     body: patientData.innerHTML,
     startY: 70,
     styles: {
-        theme: 'striped',
-        font: 'helvetica',
-        cellPadding: 2,
-        overflow: 'linebreak',
-        fontSize: 8,
-        halign: 'center',
-        valign: 'middle',
-        tableWidth: 'auto',
-        columnWidth: 'auto',
-        lineColor: [0, 0, 255],
-        lineWidth: 0.1,
-        fontStyle: 'normal',
+      theme: 'striped',
+      font: 'helvetica',
+      cellPadding: 2,
+      overflow: 'linebreak',
+      fontSize: 8,
+      halign: 'center',
+      valign: 'middle',
+      tableWidth: 'auto',
+      columnWidth: 'auto',
+      lineColor: [0, 0, 255],
+      lineWidth: 0.1,
+      fontStyle: 'normal',
+      fillColor: [255, 255, 255],
+      textColor: [0, 0, 0],
+      fillStyle: 'F',
+      rowHeight: 20,
+      columnStyles: {
+        0: { columnWidth: 'auto' },
+        1: { columnWidth: 'auto' },
+        2: { columnWidth: 'auto' },
+        3: { columnWidth: 'auto' },
+      },
+      headStyles: {
         fillColor: [255, 255, 255],
         textColor: [0, 0, 0],
-        fillStyle: 'F',
-        rowHeight: 20,
-        columnStyles: {
-            0: {columnWidth: 'auto'},
-            1: {columnWidth: 'auto'},
-            2: {columnWidth: 'auto'},
-            3: {columnWidth: 'auto'},
-        },
-        headStyles: {
-            fillColor: [255, 255, 255],
-            textColor: [0, 0, 0],
-            fontStyle: 'bold',
-            halign: 'center'
-        },
-        bodyStyles: {
-            fillColor: [255, 255, 255],
-            textColor: [0, 0, 0],
-            halign: 'center'
-        },
+        fontStyle: 'bold',
+        halign: 'center'
+      },
+      bodyStyles: {
+        fillColor: [255, 255, 255],
+        textColor: [0, 0, 0],
+        halign: 'center'
+      },
     }
-});
+  });
 
-// Save the PDF to the user's device
-pdf.save("patient-data.pdf");
+  // Save the PDF to the user's device
+  pdf.save("patient-data.pdf");
 });
-
