@@ -60,3 +60,8 @@ header {
     max-height: 80vh;
 }
 
+#footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
